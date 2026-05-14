@@ -29,7 +29,6 @@
   "dependencies": {
     "@deepkit/type-spec": "^1.0.19",
     "@types/uuid": "^11.0.0",
-    "buffer": "^6.0.3",
     "uuid": "^14.0.0"
   },
   "devDependencies": {

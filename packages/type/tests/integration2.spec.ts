@@ -1986,13 +1986,15 @@ test('default function expression', () => {
         id: integer & AutoIncrement & PrimaryKey = 0;
         created: Date = new Date;
         type: string = 'asd';
+        not?: boolean;
     }
 
     const reflection = ReflectionClass.from(post);
     expect(reflection.getProperty('uuid').hasDefaultFunctionExpression()).toBe(true);
-    expect(reflection.getProperty('id').hasDefaultFunctionExpression()).toBe(false);
-    expect(reflection.getProperty('created').hasDefaultFunctionExpression()).toBe(false);
-    expect(reflection.getProperty('type').hasDefaultFunctionExpression()).toBe(false);
+    expect(reflection.getProperty('id').hasDefaultFunctionExpression()).toBe(true);
+    expect(reflection.getProperty('created').hasDefaultFunctionExpression()).toBe(true);
+    expect(reflection.getProperty('type').hasDefaultFunctionExpression()).toBe(true);
+    expect(reflection.getProperty('not').hasDefaultFunctionExpression()).toBe(false);
 
 });
 

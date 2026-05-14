@@ -2,6 +2,7 @@ import { test, expect } from '@jest/globals';
 import * as ts from 'typescript';
 import { TransformationContext } from 'typescript';
 import { ReflectionTransformer } from '../../src/compiler.js';
+import { resolve } from 'node:path';
 
 function build(currentDir = process.cwd(), useConfig = 'tsconfig.json'): { [path: string]: string } {
     process.env.DEBUG = 'deepkit';
@@ -26,7 +27,8 @@ function build(currentDir = process.cwd(), useConfig = 'tsconfig.json'): { [path
 }
 
 test('suite1 base default', async () => {
-    const files = build(__dirname + '/suite1');
+    const cwd = resolve(__dirname, '../../../../tests/setup/suite1');
+    const files = build(cwd);
     expect(files['file1']).toContain('WithTypes.__type');
     expect(files['backend/file3']).toContain('WithTypesBackend.__type');
     //frontend contains types because frontend/tsconfig.json is not picked.
@@ -34,7 +36,8 @@ test('suite1 base default', async () => {
 });
 
 test('suite1 base no-types', async () => {
-    const files = build(__dirname + '/suite1', 'tsconfig.no-types.json');
+    const cwd = resolve(__dirname, '../../../../tests/setup/suite1');
+    const files = build(cwd, 'tsconfig.no-types.json');
     expect(files['file1']).toContain('WithTypes.__type');
     expect(files['backend/file3']).not.toContain('WithTypesBackend.__type');
     //frontend contains types because frontend/tsconfig.json is not picked.
@@ -42,11 +45,13 @@ test('suite1 base no-types', async () => {
 });
 
 test('suite1 frontend', async () => {
-    const files = build(__dirname + '/suite1/frontend');
+    const cwd = resolve(__dirname, '../../../../tests/setup/suite1/frontend');
+    const files = build(cwd);
     expect(files.file2).not.toContain('WithoutTypesFrontend.__type');
 });
 
 test('suite1 backend', async () => {
-    const files = build(__dirname + '/suite1/backend');
+    const cwd = resolve(__dirname, '../../../../tests/setup/suite1/backend');
+    const files = build(cwd);
     expect(files.file3).toContain('WithTypesBackend.__type');
 });

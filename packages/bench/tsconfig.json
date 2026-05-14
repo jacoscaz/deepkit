@@ -9,10 +9,8 @@
   },
   "reflection": true,
   "include": [
+    "tests",
     "index.ts"
-  ],
-  "exclude": [
-    "tests"
   ],
   "references": []
 }

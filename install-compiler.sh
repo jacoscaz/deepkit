@@ -2,5 +2,5 @@
 
 set -e;
 
-tsc --build packages/type-compiler/tsconfig.json;
-node packages/type-compiler/dist/cjs/install-transformer.js;
+node_modules/.bin/tsc --build packages/type-compiler/tsconfig.json
+node packages/type-compiler/dist/cjs/install-transformer.js

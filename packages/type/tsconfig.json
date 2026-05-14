@@ -6,7 +6,8 @@
       "uuid",
       "lz-string",
       "node"
-    ]
+    ],
+    "tsBuildInfoFile": ".cjs.tsbuildinfo"
   },
   "reflection": true,
   "include": [

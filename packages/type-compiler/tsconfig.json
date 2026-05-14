@@ -6,7 +6,8 @@
       "lz-string",
       "micromatch",
       "node"
-    ]
+    ],
+    "tsBuildInfoFile": ".cjs.tsbuildinfo"
   },
   "include": [
     "src",

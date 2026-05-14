@@ -5,7 +5,8 @@
     "outDir": "./dist/cjs",
     "types": [
       "node"
-    ]
+    ],
+    "tsBuildInfoFile": ".cjs.tsbuildinfo"
   },
   "reflection": true,
   "include": [

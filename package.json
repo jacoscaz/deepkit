@@ -16,7 +16,7 @@
     "clean:all": "npm run clean:dist && npm run clean:modules && npm run clean:lock",
     "clean:modules": "rm -rf packages/*/node_modules; rm -rf node_modules",
     "clean:lock": "rm -rf packages/*/package-lock.json; rm -rf package-lock.json",
-    "clean:dist": "rm -rf packages/*/dist",
+    "clean:dist": "rm -rf packages/*/dist && rm -rf packages/*/.*.tsbuildinfo",
     "docs": "rm -rf docs && node --max-old-space-size=12096 node_modules/.bin/typedoc --options typedoc.js packages/*/index.ts",
     "publish": "lerna publish --no-private patch",
     "publish-force": "npm run build && lerna publish --no-private --force-publish",

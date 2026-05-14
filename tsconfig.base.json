@@ -12,6 +12,7 @@
     "declaration": true,
     "composite": true,
     "skipLibCheck": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "tsBuildInfoFile": ".cjs.tsbuildinfo"
   }
 }

@@ -42,16 +42,8 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "transform": {
-      "^.+\\.(ts|tsx)$": [
-        "ts-jest",
-        {
-          "tsconfig": "<rootDir>/tsconfig.spec.json"
-        }
-      ]
-    },
     "testMatch": [
-      "**/tests/**/*.spec.ts"
+      "**/dist/cjs/tests/**/*.spec.js"
     ],
     "moduleNameMapper": {
       "(.+)\\.js": "$1"

@@ -29,21 +29,13 @@
   "devDependencies": {
     "@jest/globals": "^29.2.1",
     "@types/node": "^22.13.1",
-    "enhanced-resolve": "^5.21.3",
     "jest": "^29.2.1",
-    "ts-jest": "^29.4.9",
-    "ts-node": "^10.9.2",
-    "ts-node-dev": "^2.0.0",
     "typescript": "~5.8.3"
   },
   "engines": {
     "node": ">= 20.0.0"
   },
   "jest": {
-    "resolver": "./jest-resolver.js",
-    "testPathIgnorePatterns": [
-      "packages/*/dist"
-    ],
     "collectCoverageFrom": [
       "src/**/*.ts"
     ],

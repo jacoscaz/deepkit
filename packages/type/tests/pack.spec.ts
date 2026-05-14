@@ -1,5 +1,6 @@
 /** @reflection never */
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { pack, unpack } from '../src/reflection/processor.js';
 import { ReflectionOp } from '@deepkit/type-spec';
 

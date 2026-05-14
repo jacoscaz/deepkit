@@ -5,8 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "node --expose-gc --max_old_space_size=3048 node_modules/jest/bin/jest.js --forceExit --no-cache",
-    "test:coverage": "node --expose-gc --max_old_space_size=3048 node_modules/jest/bin/jest.js --coverage --forceExit --no-cache",
+    "test": "node --enable-source-maps --expose-gc --max-old-space-size=3048 --test 'packages/*/dist/cjs/tests/**/*.spec.js'",
+    "test:coverage": "node --enable-source-maps --expose-gc --max-old-space-size=3048 --test --experimental-test-coverage 'packages/*/dist/cjs/tests/**/*.spec.js'",
     "build": "tsc --build tsconfig.json && tsc --build tsconfig.esm.json",
     "build:esm": "tsc --build tsconfig.esm.json",
     "tsc": "tsc --build",
@@ -27,24 +27,11 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@jest/globals": "^29.2.1",
     "@types/node": "^22.13.1",
-    "jest": "^29.2.1",
+    "expect": "^29.7.0",
     "typescript": "~5.8.3"
   },
   "engines": {
     "node": ">= 20.0.0"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.ts"
-    ],
-    "projects": [
-      "packages/bench",
-      "packages/core",
-      "packages/type",
-      "packages/type-compiler",
-      "packages/type-spec"
-    ]
   }
 }

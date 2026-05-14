@@ -9,7 +9,8 @@
  */
 
 import { ClassType } from '@deepkit/core';
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { t } from '../src/decorator.js';
 import { ReflectionClass, typeOf } from '../src/reflection/reflection.js';
 import { ReflectionKind, TypeClass, TypeMethod } from '../src/reflection/type.js';

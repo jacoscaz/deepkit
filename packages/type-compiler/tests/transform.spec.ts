@@ -1,6 +1,7 @@
 import * as ts from 'typescript';
 import { createSourceFile, ScriptKind, ScriptTarget } from 'typescript';
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { ReflectionTransformer } from '../src/compiler.js';
 import { transform } from './utils.js';
 

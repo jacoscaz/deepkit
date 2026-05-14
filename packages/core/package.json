@@ -31,14 +31,5 @@
   "scripts": {
     "build": "echo '{\"type\": \"module\"}' > ./dist/esm/package.json"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "moduleNameMapper": {
-      "(.+)\\.js": "$1"
-    },
-    "testMatch": [
-      "**/dist/cjs/tests/**/*.spec.js"
-    ]
-  },
   "gitHead": "56081823b559bb68b77a8781957af5d9c2e019a7"
 }

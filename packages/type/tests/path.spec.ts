@@ -1,4 +1,5 @@
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { pathResolver } from '../src/path.js';
 import { ReflectionKind } from '../src/reflection/type.js';
 

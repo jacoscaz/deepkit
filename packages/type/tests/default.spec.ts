@@ -1,4 +1,5 @@
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { typeOf } from '../src/reflection/reflection.js';
 import { defaultValue } from '../src/default.js';
 

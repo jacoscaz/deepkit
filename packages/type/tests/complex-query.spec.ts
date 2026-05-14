@@ -1,5 +1,6 @@
 import { ReflectionClass, ReflectionProperty, typeOf } from '../src/reflection/reflection.js';
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { isExtendable } from '../src/reflection/extends.js';
 import { stringifyResolvedType } from '../src/reflection/type.js';
 

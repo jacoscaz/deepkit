@@ -1,5 +1,6 @@
 import { getClassName } from '@deepkit/core';
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { ReceiveType, reflect, ReflectionClass, resolveReceiveType, typeOf } from '../src/reflection/reflection.js';
 import {
     assertType,

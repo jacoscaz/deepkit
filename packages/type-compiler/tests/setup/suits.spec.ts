@@ -1,4 +1,5 @@
-import { test, expect } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import * as ts from 'typescript';
 import { TransformationContext } from 'typescript';
 import { ReflectionTransformer } from '../../src/compiler.js';

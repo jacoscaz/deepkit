@@ -40,14 +40,5 @@
     "@typescript/vfs": "^1.5.0",
     "lz-string": "^1.4.4"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "testMatch": [
-      "**/dist/cjs/tests/**/*.spec.js"
-    ],
-    "moduleNameMapper": {
-      "(.+)\\.js": "$1"
-    }
-  },
   "gitHead": "56081823b559bb68b77a8781957af5d9c2e019a7"
 }

@@ -1,4 +1,5 @@
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { ReceiveType, ReflectionClass, resolveReceiveType } from '../src/reflection/reflection.js';
 import { AutoIncrement, BackReference, isReferenceType, MapName, MongoId, PrimaryKey, Reference, UUID } from '../src/reflection/type.js';
 import { cast, cloneClass, serialize } from '../src/serializer-facade.js';

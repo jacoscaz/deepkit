@@ -1,4 +1,5 @@
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { ReceiveType, resolveReceiveType, typeOf } from '../src/reflection/reflection.js';
 import { ReflectionKind, Type } from '../src/reflection/type.js';
 import { validates } from '../src/validator.js';

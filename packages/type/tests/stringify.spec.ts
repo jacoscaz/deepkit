@@ -1,4 +1,5 @@
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { stringifyResolvedType, stringifyShortResolvedType, stringifyType, Type } from '../src/reflection/type.js';
 import { reflect, typeOf } from '../src/reflection/reflection.js';
 import { deserializeType, serializeType } from '../src/type-serialization.js';

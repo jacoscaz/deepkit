@@ -1,4 +1,5 @@
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { parseJSDocAttributeFromText } from '../src/reflection-ast.js';
 
 test('parse js doc attribute', () => {

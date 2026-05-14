@@ -22,14 +22,5 @@
   },
   "repository": "https://github.com/deepkit/deepkit-framework",
   "author": "Marc J. Schmidt <marc@marcjschmidt.de>",
-  "license": "MIT",
-  "jest": {
-    "testEnvironment": "node",
-    "moduleNameMapper": {
-      "(.+)\\.js": "$1"
-    },
-    "testMatch": [
-      "**/dist/cjs/tests/**/*.spec.js"
-    ]
-  }
+  "license": "MIT"
 }

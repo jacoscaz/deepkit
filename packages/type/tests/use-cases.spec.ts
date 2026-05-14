@@ -1,4 +1,5 @@
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { createSerializeFunction, executeTypeArgumentAsArray, SerializeFunction, serializer, TemplateState } from '../src/serializer';
 import { deserialize, serialize } from '../src/serializer-facade';
 import { validate } from '../index.js';

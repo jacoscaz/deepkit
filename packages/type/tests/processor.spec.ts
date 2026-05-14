@@ -1,5 +1,6 @@
 /** @reflection never */
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { pack } from '../src/reflection/processor.js';
 import { copyAndSetParent, ParentLessType, ReflectionKind, ReflectionVisibility, TypeObjectLiteral, TypePropertySignature, TypeUnion } from '../src/reflection/type.js';
 import { MappedModifier, ReflectionOp } from '@deepkit/type-spec';

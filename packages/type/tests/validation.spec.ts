@@ -1,4 +1,5 @@
-import { expect, jest, test } from '@jest/globals';
+import { test, mock } from 'node:test';
+import { expect } from 'expect';
 import { Email, MaxLength, MinLength, Positive, Validate, validate, validates, ValidatorError } from '../src/validator.js';
 import { assert, is } from '../src/typeguard.js';
 import { AutoIncrement, Excluded, Group, integer, PrimaryKey, Type, Unique } from '../src/reflection/type.js';
@@ -70,8 +71,8 @@ test('custom validator with arguments', () => {
 });
 
 test('multiple custom validators with identical signatures', () => {
-    const validator1: (value: any) => void = jest.fn();
-    const validator2: (value: any) => void = jest.fn();
+    const validator1 = mock.fn();
+    const validator2 = mock.fn();
 
     type MyType = {
         a: string & Validate<typeof validator1>;
@@ -79,8 +80,8 @@ test('multiple custom validators with identical signatures', () => {
     }
 
     expect(is<MyType>({ a: 'a', b: 'b' })).toEqual(true);
-    expect(validator1).toHaveBeenCalledTimes(1);
-    expect(validator2).toHaveBeenCalledTimes(1);
+    expect(validator1.mock.callCount()).toBe(1);
+    expect(validator2.mock.callCount()).toBe(1);
 });
 
 test('decorator validator', () => {

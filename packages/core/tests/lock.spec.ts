@@ -1,16 +1,15 @@
-import { jest, expect, test, beforeAll } from '@jest/globals';
+import { test, before } from 'node:test';
+import { expect } from 'expect';
 import { Mutex, ProcessLock, ProcessLocker } from '../src/process-locker.js';
-
-jest.setTimeout(20000);
 
 let locker: ProcessLocker;
 
-beforeAll(async () => {
+before(async () => {
     locker = new ProcessLocker();
 });
 
 
-test('test lock competing', async () => {
+test('test lock competing', { timeout: 20000 }, async () => {
     const started = +new Date;
     const lock1 = await locker.acquireLock('test-lock1', 2);
 
@@ -18,7 +17,7 @@ test('test lock competing', async () => {
     expect(+new Date - started).toBeGreaterThanOrEqual(2000);
 });
 
-test('test lock early release', async () => {
+test('test lock early release', { timeout: 20000 }, async () => {
     const started = +new Date;
     const lock1 = await locker.acquireLock('test-early-lock1', 2);
     setTimeout(async () => {
@@ -30,7 +29,7 @@ test('test lock early release', async () => {
     expect(+new Date - started).toBeGreaterThan(498);
 });
 
-test('test lock timeout', async () => {
+test('test lock timeout', { timeout: 20000 }, async () => {
     const started = +new Date;
     const lock1 = await locker.acquireLock('test-early-lock2', 2);
     setTimeout(async () => {
@@ -42,7 +41,7 @@ test('test lock timeout', async () => {
     expect(+new Date - started).toBeGreaterThan(498);
 });
 
-test('test lock timeout accum', async () => {
+test('test lock timeout accum', { timeout: 20000 }, async () => {
     const start = Date.now();
     const lock1 = await locker.acquireLock('test-timeout-lock1', 1);
     // console.log('took', (Date.now() - start));

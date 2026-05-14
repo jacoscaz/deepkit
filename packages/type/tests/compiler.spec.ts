@@ -1,5 +1,6 @@
 /** @reflection never */
-import { describe, expect, test } from '@jest/globals';
+import { test, describe } from 'node:test';
+import { expect } from 'expect';
 import * as ts from 'typescript';
 import { ModuleKind, ScriptTarget, TransformationContext, transpileModule } from 'typescript';
 import { DeclarationTransformer, ReflectionTransformer } from '@deepkit/type-compiler';
@@ -1856,7 +1857,7 @@ test('import types named import cjs', () => {
     expect(js['user.d.ts']).toContain(`export declare type __ΩUser = any[]`);
 });
 
-test('emit typeName for type only imports', () => {
+test('emit typeName for type only import', () => {
     const js = transpile({
         'app': `
             import type {User} from './user.js';
@@ -1867,12 +1868,7 @@ test('emit typeName for type only imports', () => {
         module: ModuleKind.CommonJS
     });
     const typeOf = typeOf2;
-    expect(eval(js['app.js'])).toMatchInlineSnapshot(`
-        {
-          "kind": 1,
-          "typeName": "User",
-        }
-    `);
+    expect(eval(js['app.js'])).toEqual({ kind: 1, typeName: "User" });
 });
 
 test('emit typeName for named type only import', () => {
@@ -1886,12 +1882,7 @@ test('emit typeName for named type only import', () => {
         module: ModuleKind.CommonJS
     });
     const typeOf = typeOf2;
-    expect(eval(js['app.js'])).toMatchInlineSnapshot(`
-        {
-          "kind": 1,
-          "typeName": "User",
-        }
-    `);
+    expect(eval(js['app.js'])).toEqual({ kind: 1, typeName: "User" });
 });
 
 test('import types named import typeOnly', () => {

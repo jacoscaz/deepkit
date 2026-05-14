@@ -7,7 +7,8 @@
  *
  * You should have received a copy of the MIT License along with this program.
  */
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { reflect, ReflectionClass, typeOf } from '../src/reflection/reflection.js';
 import {
     assertType,

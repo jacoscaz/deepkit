@@ -1,4 +1,5 @@
-import { test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { typeOf } from '../../src/reflection/reflection';
 import { assertType, findMember, ReflectionKind } from '../../src/reflection/type';
 

@@ -1,4 +1,5 @@
-import { describe, expect, test } from '@jest/globals';
+import { test, describe } from 'node:test';
+import { expect } from 'expect';
 import {
     hasCircularReference,
     ReceiveType,

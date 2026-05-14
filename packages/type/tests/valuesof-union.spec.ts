@@ -8,7 +8,8 @@
  * You should have received a copy of the MIT License along with this program.
  */
 
-import { test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { expectEqualType } from "./utils";
 import { typeOf, valuesOf } from "../src/reflection/reflection";
 

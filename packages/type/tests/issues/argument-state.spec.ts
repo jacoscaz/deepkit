@@ -1,4 +1,5 @@
-import { expect, test } from '@jest/globals';
+import { test } from 'node:test';
+import { expect } from 'expect';
 import { ReceiveType, resolveReceiveType } from '../../src/reflection/reflection';
 import { Type } from '../../src/reflection/type';
 import { forwardTypeArguments } from '@deepkit/core';

@@ -134,7 +134,7 @@ test('pointer example', () => {
     expect(point.y).toBe(2);
 
     {
-        expect(() => deserialize<Point>(['vbb'])).toThrowError(ValidationError);
+        expect(() => deserialize<Point>(['vbb'])).toThrow(ValidationError);
         expect(() => deserialize<Point>(['vbb'])).toThrow('Expected array with two elements')
     }
 

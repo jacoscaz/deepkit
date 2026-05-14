@@ -27,8 +27,8 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@types/node": "^22.13.1",
-    "expect": "^29.7.0",
+    "@types/node": "^25.8.0",
+    "expect": "^30.4.1",
     "typescript": "^6.0.3"
   },
   "engines": {

@@ -21,12 +21,12 @@
   "author": "Marc J. Schmidt <marc@marcjschmidt.de>",
   "license": "MIT",
   "dependencies": {
-    "dot-prop": "^5.1.1",
-    "to-fast-properties": "^3.0.1"
+    "dot-prop": "^10.1.0",
+    "to-fast-properties": "^4.0.0"
   },
   "devDependencies": {
     "@deepkit/bench": "^1.0.19",
-    "@types/dot-prop": "~4.2.0"
+    "@types/dot-prop": "~5.0.4"
   },
   "scripts": {
     "build": "echo '{\"type\": \"module\"}' > ./dist/esm/package.json"

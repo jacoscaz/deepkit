@@ -8,7 +8,7 @@
  * You should have received a copy of the MIT License along with this program.
  */
 
-import dotProp from 'dot-prop';
+import { getProperty, setProperty, deleteProperty } from 'dot-prop';
 import { isArray, isClass, isClassInstance, isObject, isPlainObject, isSet } from './type-guards.js';
 import { pathDirectory } from './path.js';
 
@@ -406,17 +406,17 @@ export function getPathValue(bag: { [field: string]: any }, parameterPath: strin
         return bag[parameterPath];
     }
 
-    const result = dotProp.get(bag, parameterPath);
+    const result = getProperty(bag, parameterPath);
 
     return isSet(result) ? result : defaultValue;
 }
 
 export function setPathValue(bag: object, parameterPath: string, value: any) {
-    dotProp.set(bag, parameterPath, value);
+    setProperty(bag, parameterPath, value);
 }
 
 export function deletePathValue(bag: object, parameterPath: string) {
-    dotProp.delete(bag, parameterPath);
+    deleteProperty(bag, parameterPath);
 }
 
 /**

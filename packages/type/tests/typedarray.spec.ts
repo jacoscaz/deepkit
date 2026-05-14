@@ -120,9 +120,9 @@ test('arrayBuffer', async () => {
     }
 
     const clazz = new Clazz();
-    clazz.ints = new Int8Array(2);
-    (clazz.ints as Int8Array)[0] = 1;
-    (clazz.ints as Int8Array)[1] = 64;
+    clazz.ints = new ArrayBuffer(2);
+    new Uint8Array(clazz.ints)[0] = 1;
+    new Uint8Array(clazz.ints)[1] = 64;
 
     expect(ReflectionClass.from(Clazz).getProperty('ints').type).toMatchObject({ kind: ReflectionKind.class, classType: ArrayBuffer });
     expect(new Int8Array(clazz.ints!)[0]).toBe(1);

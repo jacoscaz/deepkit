@@ -1,13 +1,13 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "outDir": "./dist/cjs",
     "lib": [
       "es2020",
       "es2022.error"
     ],
-    "tsBuildInfoFile": ".cjs.tsbuildinfo"
+    "tsBuildInfoFile": ".cjs.tsbuildinfo",
+    "types": ["node"]
   },
   "reflection": true,
   "include": [

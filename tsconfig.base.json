@@ -5,7 +5,6 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "target": "es2020",
     "module": "CommonJS",
     "esModuleInterop": true,
@@ -13,6 +12,6 @@
     "composite": true,
     "skipLibCheck": true,
     "isolatedModules": true,
-    "tsBuildInfoFile": ".cjs.tsbuildinfo"
+    "tsBuildInfoFile": ".cjs.tsbuildinfo",
   }
 }

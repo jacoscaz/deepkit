@@ -100,7 +100,7 @@ export function base64ToTypedArray<K>(base64: string, type: TypedArrayClassType<
  * Note: Regular Buffer.from(base64, 'base64) creates in Node a shared buffer, this function makes
  * sure a copy happens and the ArrayBuffer is not shared.
  */
-export function base64ToArrayBuffer(base64: string): ArrayBuffer {
+export function base64ToArrayBuffer(base64: string): ArrayBufferLike {
     if ('function' === typeof atob) {
         return base64ToUint8ArrayAtoB(base64).buffer;
     }
@@ -114,7 +114,7 @@ export function base64ToArrayBuffer(base64: string): ArrayBuffer {
  *
  * This makes a copy.
  */
-export function nodeBufferToArrayBuffer<K>(buf: Uint8Array | ArrayBuffer): ArrayBuffer {
+export function nodeBufferToArrayBuffer<K>(buf: Uint8Array | ArrayBuffer): ArrayBufferLike {
     if (ArrayBuffer.isView(buf)) return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength);
     return buf;
 }
@@ -140,7 +140,7 @@ export function typedArrayToBase64(typedArray: TypedArray): string {
 /**
  * Same as Buffer.from() but creates a ArrayBuffer that is not shared.
  */
-export function arrayBufferFrom(data: string, encoding?: string): ArrayBuffer {
+export function arrayBufferFrom(data: string, encoding?: string): ArrayBufferLike {
     return nodeBufferToArrayBuffer(Buffer.from(data, encoding as any));
 }
 

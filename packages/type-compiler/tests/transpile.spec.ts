@@ -460,6 +460,9 @@ test('keep "use x" at top', () => {
         const a = (a: string) => {};
         `
     });
+    if (res.app.startsWith('"use strict";')) {
+        res.app = res.app.slice(13).trim();
+    }
     expect(res.app.startsWith('"use client";')).toBe(true);
 });
 

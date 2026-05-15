@@ -1,6 +1,6 @@
 /** @reflection never */
 import { test, describe } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import * as ts from 'typescript';
 import { ModuleKind, ScriptTarget, TransformationContext, transpileModule } from 'typescript';
 import { DeclarationTransformer, ReflectionTransformer } from '@deepkit/type-compiler';

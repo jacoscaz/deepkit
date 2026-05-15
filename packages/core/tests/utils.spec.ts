@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { urlJoin } from '../src/url.js';
 
 test('urlJoin', async () => {

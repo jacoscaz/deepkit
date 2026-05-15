@@ -8,7 +8,7 @@
  * You should have received a copy of the MIT License along with this program.
  */
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { AbstractClassType, arrayRemoveItem, ClassType, CompilerContext, CustomError, getClassName, isClass, isFunction, urlJoin } from '@deepkit/core';
 import { isExtendable } from '../src/reflection/extends.js';
 import { ReceiveType, reflect, resolveReceiveType } from '../src/reflection/reflection.js';

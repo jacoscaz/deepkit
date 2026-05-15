@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { extractMethodBody, extractParameters, removeStrings } from '../src/reflection.js';
 
 

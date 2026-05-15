@@ -9,7 +9,7 @@
  */
 
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { equalType } from './utils.js';
 
 test('Exclude', () => {

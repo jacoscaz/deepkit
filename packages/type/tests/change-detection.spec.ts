@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { deserialize } from '../src/serializer-facade.js';
 import { createSnapshot } from '../src/snapshot.js';
 import { ReflectionClass, resolveClassType, typeOf } from '../src/reflection/reflection.js';

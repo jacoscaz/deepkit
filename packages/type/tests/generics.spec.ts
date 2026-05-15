@@ -9,7 +9,7 @@
  */
 
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { typeInfer } from '../src/reflection/processor.js';
 import { removeTypeName, typeOf } from '../src/reflection/reflection.js';
 import { assertType, ReflectionKind, ReflectionVisibility, Type, Widen } from '../src/reflection/type.js';

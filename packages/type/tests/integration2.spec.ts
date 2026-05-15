@@ -10,7 +10,7 @@
 
 import { ClassType } from '@deepkit/core';
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { entity, t } from '../src/decorator.js';
 import { propertiesOf, reflect, ReflectionClass, ReflectionFunction, ReflectionMethod, typeOf, valuesOf } from '../src/reflection/reflection.js';
 import {

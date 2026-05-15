@@ -7,7 +7,7 @@ import {
 } from '../src/reflection/type.js';
 import { Processor, RuntimeStackEntry } from '../src/reflection/processor.js';
 import { ReceiveType, removeTypeName, resolveReceiveType } from '../src/reflection/reflection.js';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { ReflectionOp } from '@deepkit/type-spec';
 import { isArray, isObject } from '@deepkit/core';
 

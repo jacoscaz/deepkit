@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { typeOf } from '../../src/reflection/reflection';
 import { assertType, MapName, ReflectionKind, typeAnnotation, validationAnnotation } from '../../src/reflection/type';
 import { cast, serialize } from '../../src/serializer-facade';

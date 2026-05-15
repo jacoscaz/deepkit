@@ -8,7 +8,7 @@
  * You should have received a copy of the MIT License along with this program.
  */
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { float, float32, int8, integer, PrimaryKey, Reference } from '../src/reflection/type.js';
 import { is } from '../src/typeguard.js';
 import { Serializer } from '../src/serializer.js';

@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { typeOf } from '../src/reflection/reflection.js';
 import { cast } from '../src/serializer-facade.js';
 

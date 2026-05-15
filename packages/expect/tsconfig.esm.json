@@ -6,11 +6,6 @@
     "tsBuildInfoFile": ".esm.tsbuildinfo"
   },
   "references": [
-    {
-      "path": "../bench/tsconfig.esm.json"
-    },
-    {
-      "path": "../expect/tsconfig.esm.json"
-    }
+
   ]
 }

@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { TypeEnum } from '../src/reflection/type.js';
 import { ReflectionClass, ReflectionMethod, ReflectionFunction, typeOf } from '../src/reflection/reflection.js';
 

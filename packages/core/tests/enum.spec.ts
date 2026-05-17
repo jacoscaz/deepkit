@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { getEnumLabels, getEnumValues } from '../src/enum.js';
 
 test('getEnumLabels numbered index', () => {

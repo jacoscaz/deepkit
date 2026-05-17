@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { cast } from '../../src/serializer-facade';
 import { is } from '../../src/typeguard.js';
 

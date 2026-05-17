@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { log, stack } from '../src/decorators.js';
 import { sleep } from '../src/core.js';
 

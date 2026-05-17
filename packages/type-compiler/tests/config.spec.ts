@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { ParseConfigHost, ScriptTarget } from 'typescript';
 
 import { TsConfigJson, defaultExcluded, ConfigResolver, getConfigResolver } from '../src/config.js';

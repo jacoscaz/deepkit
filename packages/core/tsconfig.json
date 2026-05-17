@@ -18,6 +18,9 @@
   "references": [
     {
       "path": "../bench/tsconfig.json"
+    },
+    {
+      "path": "../expect/tsconfig.json"
     }
   ]
 }

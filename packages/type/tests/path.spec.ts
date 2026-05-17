@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { pathResolver } from '../src/path.js';
 import { ReflectionKind } from '../src/reflection/type.js';
 

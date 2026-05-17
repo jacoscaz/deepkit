@@ -9,7 +9,7 @@
  */
 
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { ReceiveType, reflect, typeOf } from '../src/reflection/reflection.js';
 import { assertType, InlineRuntimeType, ReflectionKind, stringifyResolvedType, Type } from '../src/reflection/type.js';
 import { serialize } from '../src/serializer-facade.js';

@@ -9,7 +9,7 @@
  */
 
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { expectEqualType } from "./utils";
 import { typeOf, valuesOf } from "../src/reflection/reflection";
 

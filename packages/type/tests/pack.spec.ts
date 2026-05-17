@@ -1,6 +1,6 @@
 /** @reflection never */
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { pack, unpack } from '../src/reflection/processor.js';
 import { ReflectionOp } from '@deepkit/type-spec';
 

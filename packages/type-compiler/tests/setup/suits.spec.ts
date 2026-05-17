@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import * as ts from 'typescript';
 import { TransformationContext } from 'typescript';
 import { ReflectionTransformer } from '../../src/compiler.js';

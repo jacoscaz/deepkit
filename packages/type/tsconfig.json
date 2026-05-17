@@ -23,6 +23,9 @@
       "path": "../core/tsconfig.json"
     },
     {
+      "path": "../expect/tsconfig.json"
+    },
+    {
       "path": "../type-compiler/tsconfig.json"
     }
   ]

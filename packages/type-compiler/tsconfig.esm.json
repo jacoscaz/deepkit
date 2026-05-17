@@ -8,6 +8,9 @@
   "references": [
     {
       "path": "../type-spec/tsconfig.esm.json"
+    },
+    {
+      "path": "../expect/tsconfig.esm.json"
     }
   ]
 }

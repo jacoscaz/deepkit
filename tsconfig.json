@@ -16,5 +16,8 @@
     {
       "path": "./packages/type-spec/tsconfig.json"
     },
+    {
+      "path": "./packages/expect/tsconfig.json"
+    },
   ]
 }

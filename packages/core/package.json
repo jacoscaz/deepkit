@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@deepkit/bench": "^1.0.19",
+    "@deepkit/expect": "^1.0.19",
     "@types/dot-prop": "~5.0.4"
   },
   "scripts": {

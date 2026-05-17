@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { pathBasename, pathDirectory, pathNormalize, pathNormalizeDirectory } from '../src/path.js';
 
 test('pathNormalize', () => {

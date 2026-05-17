@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from 'expect';
+import { expect } from '@deepkit/expect';
 import { Buffer } from 'buffer';
 import { ReflectionClass } from '../src/reflection/reflection.js';
 import { assertType, binaryTypes, ReflectionKind } from '../src/reflection/type.js';

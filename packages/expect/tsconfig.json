@@ -3,25 +3,17 @@
   "compilerOptions": {
     "outDir": "./dist/cjs",
     "types": [
-      "lz-string",
-      "micromatch",
       "node"
     ],
     "tsBuildInfoFile": ".cjs.tsbuildinfo"
   },
+  "reflection": true,
   "include": [
     "src",
-    "tests",
-    "install-transformer.ts",
-    "compiler-debug.ts",
-    "index.ts"
+    "index.ts",
+    "tests"
   ],
   "references": [
-    {
-      "path": "../type-spec/tsconfig.json"
-    },
-    {
-      "path": "../expect/tsconfig.json"
-    }
+
   ]
 }

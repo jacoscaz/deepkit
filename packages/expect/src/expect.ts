@@ -1,10 +1,9 @@
 import { expect } from "chai";
+import { toEqual, toMatchObject } from "./helpers";
 
-/**
- * A minimalistic expect-style assertion library.
- * Provides chainable matchers similar to Jest's expect().
- */
+
 export class Expect<T> {
+
     #not?: Expect<T>;
     #actual: T;
     #negated: boolean;
@@ -33,14 +32,13 @@ export class Expect<T> {
      * Asserts deep equality using Node's deepStrictEqual.
      */
     toEqual(expected: any): void {
-        if (this.#actual instanceof Map) {
-            new Expect(Array.from(this.#actual), this.#negated).toEqual(Array.from(expected));
-        } else if (Array.isArray(this.#actual)) {
-            this.#wrap().to.deep.equal(expected);
-        } else if (typeof this.#actual === 'object' && this.#actual !== null) {
-            this.#wrap().to.deep.own.include(expected);
-        } else {
-            this.#wrap().to.deep.equal(expected);
+        try {
+            toEqual(this.#actual, expected);
+        } catch (err) {
+            if (this.#negated) {
+                return;
+            }
+            throw err;
         }
     }
 
@@ -180,7 +178,14 @@ export class Expect<T> {
      * Asserts that an object matches a subset of properties.
      */
     toMatchObject(expected: Record<string, any> | any[]): void {
-        this.#wrap().to.deep.own.include(expected);
+        try {
+            toMatchObject(this.#actual, expected);
+        } catch (err) {
+            if (this.#negated) {
+                return;
+            }
+            throw err;
+        }
     }
 
     /**

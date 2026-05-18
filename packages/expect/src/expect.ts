@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { toEqual, toMatchObject } from "./helpers";
+import { toMatch, toMatchObject } from "./helpers";
 
 
 export class Expect<T> {
@@ -33,7 +33,7 @@ export class Expect<T> {
      */
     toEqual(expected: any): void {
         try {
-            toEqual(this.#actual, expected);
+            toMatch(this.#actual, expected);
         } catch (err) {
             if (this.#negated) {
                 return;

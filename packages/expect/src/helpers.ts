@@ -1,13 +1,13 @@
 
 import { expect } from 'chai';
 
-export const toEqual = (actual: any, expected: any): void => {
+export const toMatch = (actual: any, expected: any): void => {
     if (typeof expected === 'object' && expected !== null) {
         toMatchObject(actual, expected);
     } else {
         expect(actual).to.equal(expected);
     }
-}
+};
 
 export const toMatchMap = (actual: any, expected: Map<any, any>): void => {
     expect(actual).to.be.a('map');
@@ -22,7 +22,7 @@ export const toMatchSet = (actual: any, expected: Set<any>): void => {
 export const toMatchArray = (actual: any, expected: any[]): void => {
     expect(actual).to.be.an('array').and.to.have.length(expected.length);
     (actual as any[]).forEach((el, idx) => {
-        toEqual(el, expected[idx]);
+        toMatch(el, expected[idx]);
     });
 };
 
@@ -56,7 +56,7 @@ export const toMatchObject = <O extends {}>(actual: any, expected: O): void => {
     } else {
         expect(actual).to.be.an('object').and.not.be.null;
         for (const [key, value] of Object.entries(expected)) {
-            toEqual(actual[key], value);
+            toMatch(actual[key], value);
         }
     }
 };

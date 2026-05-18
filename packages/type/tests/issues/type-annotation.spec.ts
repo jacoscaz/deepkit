@@ -1,10 +1,10 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { typeOf } from '../../src/reflection/reflection';
 import { assertType, MapName, ReflectionKind, typeAnnotation, validationAnnotation } from '../../src/reflection/type';
 import { cast, serialize } from '../../src/serializer-facade';
 
-import { TypeAnnotation } from '@deepkit/core';
+import { TypeAnnotation } from '@runtyped/core';
 import { MinLength } from '../../src/validator';
 
 test('Meta', () => {

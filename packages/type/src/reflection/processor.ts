@@ -1,6 +1,7 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (c) Deepkit UG, Marc J. Schmidt
+ * Copyright (c) Jacopo Scazzosi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
@@ -53,9 +54,9 @@ import {
     validationAnnotation,
     widenLiteral,
 } from './type.js';
-import { MappedModifier, ReflectionOp, TypeIntrinsic } from '@deepkit/type-spec';
+import { MappedModifier, ReflectionOp, TypeIntrinsic } from '@runtyped/type-spec';
 import { isExtendable } from './extends.js';
-import { ClassType, isArray, isClass, isFunction, stringifyValueWithType } from '@deepkit/core';
+import { ClassType, isArray, isClass, isFunction, stringifyValueWithType } from '@runtyped/core';
 import { isWithDeferredDecorators } from '../decorator.js';
 import { ReflectionClass, TData } from './reflection.js';
 import { state } from './state.js';
@@ -367,7 +368,7 @@ export class Processor {
                     parameters: [], return: { kind: ReflectionKind.any },
                 };
             }
-            throw new Error(`No valid runtime type for ${stringifyValueWithType(object)} given. Is @deepkit/type-compiler correctly installed? Execute deepkit-type-install to check`);
+            throw new Error(`No valid runtime type for ${stringifyValueWithType(object)} given. Is @runtyped/type-compiler correctly installed? Execute runtyped-type-install to check`);
         }
 
         for (let i = 0; i < inputs.length; i++) {

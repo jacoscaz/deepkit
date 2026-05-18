@@ -1,6 +1,7 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (c) Deepkit UG, Marc J. Schmidt
+ * Copyright (c) Jacopo Scazzosi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
@@ -50,7 +51,7 @@ import {
     TypePropertySignature,
     TypeTemplateLiteral,
 } from './type.js';
-import { AbstractClassType, arrayRemoveItem, ClassType, getClassName, isArray, isClass, isFunction, isGlobalClass, isPrototypeOfBase, stringifyValueWithType } from '@deepkit/core';
+import { AbstractClassType, arrayRemoveItem, ClassType, getClassName, isArray, isClass, isFunction, isGlobalClass, isPrototypeOfBase, stringifyValueWithType } from '@runtyped/core';
 import { Packed, resolvePacked, resolveRuntimeType } from './processor.js';
 import { NoTypeReceived } from '../utils.js';
 import { findCommonLiteral } from '../inheritance.js';

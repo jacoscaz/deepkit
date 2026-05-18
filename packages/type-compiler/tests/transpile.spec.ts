@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { transpile, transpileAndRun } from './utils.js';
 import * as ts from 'typescript';
 

@@ -1,5 +1,5 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (C) 2021 Deepkit UG, Marc J. Schmidt
  *
  * This program is free software: you can redistribute it and/or modify
@@ -36,4 +36,4 @@ export * from './src/reflection/type.js';
 export * from './src/reflection/extends.js';
 export * from './src/reflection/reflection.js';
 
-export { TypeNumberBrand } from '@deepkit/type-spec';
+export { TypeNumberBrand } from '@runtyped/type-spec';

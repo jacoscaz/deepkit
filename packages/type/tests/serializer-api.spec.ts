@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import {
     EmptySerializer,
     executeTemplates,
@@ -11,7 +11,7 @@ import {
     TypeGuardRegistry,
 } from '../src/serializer.js';
 import { ReflectionKind, stringifyResolvedType } from '../src/reflection/type.js';
-import { CompilerContext } from '@deepkit/core';
+import { CompilerContext } from '@runtyped/core';
 import { cast, deserialize, serialize } from '../src/serializer-facade.js';
 import { ValidationError } from '../src/validator';
 

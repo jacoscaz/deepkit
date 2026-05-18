@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { typeOf } from '../../src/reflection/reflection';
 import { typeAnnotation } from '../../src/reflection/type';
 

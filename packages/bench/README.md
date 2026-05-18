@@ -1,8 +1,8 @@
-# Bench
+# @runtyped/bench
 
 ```typescript
 // benchmarks/test.ts
-import { benchmark, run } from '@deepkit/bench';
+import { benchmark, run } from '@runtyped/bench';
 
 let i = 0;
 
@@ -14,5 +14,5 @@ void run();
 ```
 
 ```sh
-node --import @deepkit/run benchmarks/test.ts 
+node --import @runtyped/run benchmarks/test.ts 
 ```

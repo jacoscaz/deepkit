@@ -1,11 +1,11 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { ParseConfigHost, ScriptTarget } from 'typescript';
 
 import { TsConfigJson, defaultExcluded, ConfigResolver, getConfigResolver } from '../src/config.js';
 import { patternMatch } from '../src/resolver.js';
 
-process.env.DEBUG = 'deepkit';
+process.env.DEBUG = 'runtyped';
 
 function buildHost(files: { [fileName: string]: TsConfigJson }): ParseConfigHost {
     return {

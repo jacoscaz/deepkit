@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { arrayMoveItem } from '../src/array.js';
 import { arrayClear, arrayHasItem, arrayRemoveItem } from '../src/array.js';
 

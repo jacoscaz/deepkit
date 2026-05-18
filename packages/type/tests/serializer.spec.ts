@@ -1,6 +1,7 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (c) Deepkit UG, Marc J. Schmidt
+ * Copyright (c) Jacopo Scazzosi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
@@ -8,7 +9,7 @@
  * You should have received a copy of the MIT License along with this program.
  */
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { reflect, ReflectionClass, typeOf } from '../src/reflection/reflection.js';
 import {
     assertType,
@@ -35,7 +36,7 @@ import {
 } from '../src/reflection/type.js';
 import { createSerializeFunction, getSerializeFunction, NamingStrategy, Serializer, serializer, underscoreNamingStrategy } from '../src/serializer.js';
 import { cast, deserialize, patch, serialize } from '../src/serializer-facade.js';
-import { getClassName, TypeAnnotation } from '@deepkit/core';
+import { getClassName, TypeAnnotation } from '@runtyped/core';
 import { entity, t } from '../src/decorator.js';
 import { Alphanumeric, MaxLength, MinLength, ValidationError } from '../src/validator.js';
 import { StatEnginePowerUnit, StatWeightUnit } from './types.js';

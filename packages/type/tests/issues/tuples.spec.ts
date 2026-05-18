@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { cast, validate } from '../../index.js';
 
 test('cast literal obj having typed tuple [number | null, number | null] as nested prop', () => {

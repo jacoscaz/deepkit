@@ -1,6 +1,7 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (c) Deepkit UG, Marc J. Schmidt
+ * Copyright (c) Jacopo Scazzosi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
@@ -332,4 +333,3 @@ function finish<T extends MetaNode>(oldNode: MetaNode, newNode: T): T {
     newNode.symbol = newNode._symbol;
     return newNode;
 }
-

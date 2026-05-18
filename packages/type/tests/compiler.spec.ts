@@ -1,13 +1,13 @@
 /** @reflection never */
 import { test, describe } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import * as ts from 'typescript';
 import { ModuleKind, ScriptTarget, TransformationContext, transpileModule } from 'typescript';
-import { DeclarationTransformer, ReflectionTransformer } from '@deepkit/type-compiler';
+import { DeclarationTransformer, ReflectionTransformer } from '@runtyped/type-compiler';
 import { reflect, reflect as reflect2, ReflectionClass, removeTypeName, typeOf as typeOf2 } from '../src/reflection/reflection.js';
 import { assertType, defaultAnnotation, primaryKeyAnnotation, ReflectionKind, ReflectionVisibility, stringifyType, Type, TypeClass, TypeFunction, TypeMethod, TypeObjectLiteral, TypeProperty, TypeUnion } from '../src/reflection/type.js';
-import { ReflectionOp } from '@deepkit/type-spec';
-import { ClassType, isObject } from '@deepkit/core';
+import { ReflectionOp } from '@runtyped/type-spec';
+import { ClassType, isObject } from '@runtyped/core';
 import { pack, resolveRuntimeType } from '../src/reflection/processor.js';
 import { expectEqualType } from './utils.js';
 import { createSystem, createVirtualCompilerHost, knownLibFilesForCompilerOptions } from '@typescript/vfs';
@@ -51,7 +51,7 @@ export function transpile<T extends string | Record<string, string>>(files: T, o
         ...options
     };
 
-    process.env['DEBUG'] = 'deepkit';
+    process.env['DEBUG'] = 'runtyped';
     if ('string' === typeof files) {
         return transpileModule(files, {
             fileName: __dirname + '/module.ts',
@@ -1682,7 +1682,7 @@ test('interface extends decorator', () => {
 
 test('brand intersection symbol', () => {
     const code = `
-    const meta = Symbol.for('deepkit/meta');
+    const meta = Symbol.for('runtyped/meta');
     type PrimaryKey = { [meta]?: 'primaryKey' };
 
     return typeOf<string & PrimaryKey>();
@@ -1697,7 +1697,7 @@ test('brand intersection symbol', () => {
             [defaultAnnotation.symbol]: [
                 {
                     kind: ReflectionKind.objectLiteral, typeName: 'PrimaryKey', types: [
-                        { kind: ReflectionKind.propertySignature, name: Symbol.for('deepkit/meta'), type: { kind: ReflectionKind.literal, literal: 'primaryKey' }, optional: true }
+                        { kind: ReflectionKind.propertySignature, name: Symbol.for('runtyped/meta'), type: { kind: ReflectionKind.literal, literal: 'primaryKey' }, optional: true }
                     ]
                 },
             ]
@@ -1723,7 +1723,7 @@ test('circular 1', () => {
     //         {kind: ReflectionKind.string},
     //         {
     //             kind: ReflectionKind.objectLiteral, types: [
-    //                 {kind: ReflectionKind.propertySignature, name: Symbol.for('deepkit/meta'), type: {kind: ReflectionKind.literal, literal: 'primaryKey'}, optional: true}
+    //                 {kind: ReflectionKind.propertySignature, name: Symbol.for('runtyped/meta'), type: {kind: ReflectionKind.literal, literal: 'primaryKey'}, optional: true}
     //             ]
     //         },
     //     ]

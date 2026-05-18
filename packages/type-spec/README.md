@@ -1,3 +1,3 @@
-# @deepkit/type-spec
+# @runtyped/type-spec
 
-Shared spec information of the bytecode representation of deepkit/type.
+Shared spec information of the bytecode representation of @runtyped/type.

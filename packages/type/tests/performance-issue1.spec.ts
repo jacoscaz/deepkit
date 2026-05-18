@@ -1,5 +1,5 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (C) 2021 Deepkit UG, Marc J. Schmidt
  *
  * This program is free software: you can redistribute it and/or modify
@@ -8,8 +8,8 @@
  * You should have received a copy of the MIT License along with this program.
  */
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
-import { AbstractClassType, arrayRemoveItem, ClassType, CompilerContext, CustomError, getClassName, isClass, isFunction, urlJoin } from '@deepkit/core';
+import { expect } from '@runtyped/expect';
+import { AbstractClassType, arrayRemoveItem, ClassType, CompilerContext, CustomError, getClassName, isClass, isFunction, urlJoin } from '@runtyped/core';
 import { isExtendable } from '../src/reflection/extends.js';
 import { ReceiveType, reflect, resolveReceiveType } from '../src/reflection/reflection.js';
 import { isType, Type } from '../src/reflection/type.js';
@@ -945,7 +945,7 @@ export class InjectorContext {
     }
 }
 
-@entity.name('@deepkit/UploadedFile')
+@entity.name('@runtyped/UploadedFile')
 export class UploadedFile {
     /**
      * The size of the uploaded file in bytes.

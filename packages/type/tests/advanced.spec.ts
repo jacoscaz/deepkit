@@ -1,5 +1,5 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright Deepkit UG, Marc J. Schmidt
  *
  * This program is free software: you can redistribute it and/or modify
@@ -9,7 +9,7 @@
  */
 
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { ReceiveType, reflect, typeOf } from '../src/reflection/reflection.js';
 import { assertType, InlineRuntimeType, ReflectionKind, stringifyResolvedType, Type } from '../src/reflection/type.js';
 import { serialize } from '../src/serializer-facade.js';
@@ -65,7 +65,7 @@ test('circular generic 1', () => {
         $not?: T extends string ? (QuerySelector<T> | RegExp) : QuerySelector<T>;
         $regex?: T extends string ? (RegExp | string) : never;
 
-        //special deepkit/type type
+        //special runtyped/type type
         $parameter?: string;
     };
 
@@ -111,7 +111,7 @@ test('circular generic 1', () => {
         $not?: T extends string ? (QuerySelector<T> | RegExp) : QuerySelector<T>;
         $regex?: T extends string ? (RegExp | string) : never;
 
-        //special deepkit/type type
+        //special runtyped/type type
         $parameter?: string;
     };
 

@@ -1,9 +1,9 @@
 /** @reflection never */
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { pack } from '../src/reflection/processor.js';
 import { copyAndSetParent, ParentLessType, ReflectionKind, ReflectionVisibility, TypeObjectLiteral, TypePropertySignature, TypeUnion } from '../src/reflection/type.js';
-import { MappedModifier, ReflectionOp } from '@deepkit/type-spec';
+import { MappedModifier, ReflectionOp } from '@runtyped/type-spec';
 import { isExtendable } from '../src/reflection/extends.js';
 import { assertValidParent, expectEqualType, expectType } from './utils.js';
 

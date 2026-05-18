@@ -1,6 +1,7 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (c) Deepkit UG, Marc J. Schmidt
+ * Copyright (c) Jacopo Scazzosi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
@@ -39,7 +40,7 @@ import {
     TypeTuple,
     TypeUnion,
 } from './type.js';
-import { isPrototypeOfBase } from '@deepkit/core';
+import { isPrototypeOfBase } from '@runtyped/core';
 import { typeInfer } from './processor.js';
 
 type AssignableType = Type | string | boolean | number | symbol | bigint | undefined | null;

@@ -1,6 +1,7 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (c) Deepkit UG, Marc J. Schmidt
+ * Copyright (c) Jacopo Scazzosi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
@@ -8,7 +9,7 @@
  * You should have received a copy of the MIT License along with this program.
  */
 
-import { AbstractClassType, ClassType, getClassName } from '@deepkit/core';
+import { AbstractClassType, ClassType, getClassName } from '@runtyped/core';
 
 export type ClassDecoratorFn = (classType: AbstractClassType, property?: string, parameterIndexOrDescriptor?: any) => void;
 export type PropertyDecoratorFn = (prototype: object, property?: number | string | symbol, parameterIndexOrDescriptor?: any) => void;

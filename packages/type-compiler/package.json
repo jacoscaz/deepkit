@@ -1,7 +1,7 @@
 {
-  "name": "@deepkit/type-compiler",
+  "name": "@runtyped/type-compiler",
   "version": "1.0.19",
-  "description": "Deepkit/type compiler/Typescript transformer",
+  "description": "@runtyped/type compiler/Typescript transformer",
   "type": "commonjs",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -19,8 +19,8 @@
     }
   },
   "bin": {
-    "deepkit-compiler-debug": "./deepkit-compiler-debug.js",
-    "deepkit-type-install": "./deepkit-type-install.js"
+    "runtyped-compiler-debug": "./runtyped-compiler-debug.js",
+    "runtyped-type-install": "./runtyped-type-install.js"
   },
   "sideEffects": false,
   "publishConfig": {
@@ -28,21 +28,23 @@
   },
   "scripts": {
     "build": "echo '{\"type\": \"module\"}' > ./dist/esm/package.json",
-    "install": "rm -rf node_modules/typescript && node ./deepkit-type-install.js || exit 0"
+    "install": "rm -rf node_modules/typescript && node ./runtyped-type-install.js || exit 0"
   },
-  "repository": "https://github.com/deepkit/deepkit-framework",
-  "author": "Marc J. Schmidt <marc@marcjschmidt.de>",
+  "repository": "https://github.com/runtyped/runtyped",
+  "authors": [
+    "Marc J. Schmidt <marc@marcjschmidt.de>",
+    "Jacopo Scazzosi <jacopo@scazzosi.com>"
+  ],
   "license": "MIT",
   "peerDependencies": {
     "typescript": "*"
   },
   "devDependencies": {
-    "@deepkit/expect": "^1.0.19",
-    "@types/lz-string": "^1.5.0",
+    "@runtyped/expect": "^1.0.19",
     "@types/micromatch": "^4.0.10"
   },
   "dependencies": {
-    "@deepkit/type-spec": "^1.0.19",
+    "@runtyped/type-spec": "^1.0.19",
     "@marcj/ts-clone-node": "^2.2.0",
     "@rollup/pluginutils": "^5.3.0",
     "@typescript/vfs": "1.6.4",

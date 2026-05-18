@@ -1,9 +1,0 @@
-node_modules
-dist
-website/dist
-website/node_modules
-website/.angular
-.dockerignore
-Dockerfile
-website/Dockerfile
-website/api-docs.json

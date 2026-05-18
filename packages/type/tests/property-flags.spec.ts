@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { assertType, integer, ReflectionKind } from '../src/reflection/type.js';
 import { ReflectionClass, typeOf } from '../src/reflection/reflection.js';
 import { expectEqualType } from './utils.js';
@@ -78,4 +78,3 @@ test('nested mapped types should work', () => {
     expect(type.types[1].optional).toBe(undefined);
     expect(type.types[1].readonly).toBe(true);
 });
-

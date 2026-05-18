@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { TypeEnum } from '../src/reflection/type.js';
 import { ReflectionClass, ReflectionMethod, ReflectionFunction, typeOf } from '../src/reflection/reflection.js';
 
@@ -73,5 +73,3 @@ test('description available on TypeEnum', () => {
   expect(type.description).toEqual('results enum');
 
 });
-
-

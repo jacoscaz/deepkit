@@ -1,5 +1,5 @@
 import { test, before } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { Mutex, ProcessLock, ProcessLocker } from '../src/process-locker.js';
 
 let locker: ProcessLocker;

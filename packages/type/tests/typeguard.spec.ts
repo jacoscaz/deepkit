@@ -1,6 +1,7 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (c) Deepkit UG, Marc J. Schmidt
+ * Copyright (c) Jacopo Scazzosi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
@@ -8,7 +9,7 @@
  * You should have received a copy of the MIT License along with this program.
  */
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { float, float32, int8, integer, PrimaryKey, Reference } from '../src/reflection/type.js';
 import { is } from '../src/typeguard.js';
 import { Serializer } from '../src/serializer.js';

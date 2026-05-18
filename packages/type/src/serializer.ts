@@ -1,6 +1,7 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (c) Deepkit UG, Marc J. Schmidt
+ * Copyright (c) Jacopo Scazzosi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
@@ -8,7 +9,7 @@
  * You should have received a copy of the MIT License along with this program.
  */
 
-import { ClassType, CompilerContext, CustomError, getObjectKeysSize, hasProperty, isArray, isFunction, isInteger, isIterable, isNumeric, isObject, isObjectLiteral, iterableSize, stringifyValueWithType, toFastProperties } from '@deepkit/core';
+import { ClassType, CompilerContext, CustomError, getObjectKeysSize, hasProperty, isArray, isFunction, isInteger, isIterable, isNumeric, isObject, isObjectLiteral, iterableSize, stringifyValueWithType, toFastProperties } from '@runtyped/core';
 import {
     AnnotationDefinition,
     assertType,
@@ -57,7 +58,7 @@ import {
     TypeUnion,
     validationAnnotation,
 } from './reflection/type.js';
-import { TypeNumberBrand } from '@deepkit/type-spec';
+import { TypeNumberBrand } from '@runtyped/type-spec';
 import { hasCircularReference, ReflectionClass, ReflectionProperty } from './reflection/reflection.js';
 import { extendTemplateLiteral, isExtendable } from './reflection/extends.js';
 import { resolveRuntimeType } from './reflection/processor.js';

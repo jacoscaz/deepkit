@@ -1,8 +1,8 @@
 /** @reflection never */
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { pack, unpack } from '../src/reflection/processor.js';
-import { ReflectionOp } from '@deepkit/type-spec';
+import { ReflectionOp } from '@runtyped/type-spec';
 
 Error.stackTraceLimit = 200;
 

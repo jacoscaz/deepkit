@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { typeOf } from '../src/reflection/reflection.js';
 import { cast } from '../src/serializer-facade.js';
 
@@ -60,7 +60,7 @@ type QuerySelector<T> = {
     $bitsAnyClear?: BitwiseQuery;
     $bitsAnySet?: BitwiseQuery;
 
-    //special deepkit/type type
+    //special runtyped/type type
     $parameter?: string;
 };
 

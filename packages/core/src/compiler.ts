@@ -1,5 +1,5 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (C) 2021 Deepkit UG, Marc J. Schmidt
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@ declare var process: {
     env: Record<string, string>;
 } | undefined;
 
-const indentCode = ('undefined' !== typeof process && process.env?.DEBUG || '').includes('deepkit');
+const indentCode = ('undefined' !== typeof process && process.env?.DEBUG || '').includes('runtyped');
 
 export class CompilerContext {
     public readonly context = new Map<string, any>();

@@ -1,6 +1,7 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (c) Deepkit UG, Marc J. Schmidt
+ * Copyright (c) Jacopo Scazzosi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
@@ -8,8 +9,8 @@
  * You should have received a copy of the MIT License along with this program.
  */
 
-import { AbstractClassType, arrayRemoveItem, ClassType, getClassName, getInheritanceChain, getParentClass, indent, isArray, isClass, isGlobalClass, TypeAnnotation } from '@deepkit/core';
-import { TypeNumberBrand } from '@deepkit/type-spec';
+import { AbstractClassType, arrayRemoveItem, ClassType, getClassName, getInheritanceChain, getParentClass, indent, isArray, isClass, isGlobalClass, TypeAnnotation } from '@runtyped/core';
+import { TypeNumberBrand } from '@runtyped/type-spec';
 import { getProperty, ReceiveType, reflect, ReflectionClass, resolveReceiveType, toSignature } from './reflection.js';
 import { isExtendable } from './extends.js';
 import { state } from './state.js';

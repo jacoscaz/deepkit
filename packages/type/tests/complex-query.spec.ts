@@ -1,6 +1,6 @@
 import { ReflectionClass, ReflectionProperty, typeOf } from '../src/reflection/reflection.js';
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { isExtendable } from '../src/reflection/extends.js';
 import { stringifyResolvedType } from '../src/reflection/type.js';
 

@@ -7,9 +7,9 @@ import {
 } from '../src/reflection/type.js';
 import { Processor, RuntimeStackEntry } from '../src/reflection/processor.js';
 import { ReceiveType, removeTypeName, resolveReceiveType } from '../src/reflection/reflection.js';
-import { expect } from '@deepkit/expect';
-import { ReflectionOp } from '@deepkit/type-spec';
-import { isArray, isObject } from '@deepkit/core';
+import { expect } from '@runtyped/expect';
+import { ReflectionOp } from '@runtyped/type-spec';
+import { isArray, isObject } from '@runtyped/core';
 
 export function assertValidParent(a: Type): void {
     visitWithParent(a, (type, path, parent) => {

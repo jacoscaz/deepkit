@@ -1,3 +1,3 @@
-# @deepkit/type-compiler
+# @runtyped/type-compiler
 
-The compiler/transformer of deepkit/type.
+The compiler/transformer of @runtyped/type.

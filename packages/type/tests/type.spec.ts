@@ -1,5 +1,5 @@
 import { test, describe } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import {
     hasCircularReference,
     ReceiveType,
@@ -39,7 +39,7 @@ import {
 } from '../src/reflection/type.js';
 import { isExtendable } from '../src/reflection/extends.js';
 import { expectEqualType } from './utils.js';
-import { ClassType, TypeAnnotation } from '@deepkit/core';
+import { ClassType, TypeAnnotation } from '@runtyped/core';
 import { Partial } from '../src/changes.js';
 import { MaxLength, MinLength } from '../src/validator.js';
 

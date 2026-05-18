@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { getConverterForSnapshot, getPrimaryKeyExtractor, getPrimaryKeyHashGenerator } from '../src/snapshot.js';
 import { PrimaryKey, Reference } from '../src/reflection/type.js';
 import { ReflectionClass } from '../src/reflection/reflection.js';

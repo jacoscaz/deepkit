@@ -1,5 +1,5 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright Deepkit UG, Marc J. Schmidt
  *
  * This program is free software: you can redistribute it and/or modify
@@ -9,7 +9,7 @@
  */
 
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { typeInfer } from '../src/reflection/processor.js';
 import { removeTypeName, typeOf } from '../src/reflection/reflection.js';
 import { assertType, ReflectionKind, ReflectionVisibility, Type, Widen } from '../src/reflection/type.js';

@@ -1,7 +1,7 @@
 {
-  "name": "@deepkit/core",
+  "name": "@runtyped/core",
   "version": "1.0.19",
-  "description": "Deepkit core library",
+  "description": "Runtyped core library",
   "type": "commonjs",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -17,20 +17,22 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/deepkit/deepkit-framework",
-  "author": "Marc J. Schmidt <marc@marcjschmidt.de>",
+  "repository": "https://github.com/runtyped/runtyped",
+  "authors": [
+    "Marc J. Schmidt <marc@marcjschmidt.de>",
+    "Jacopo Scazzosi <jacopo@scazzosi.com>"
+  ],
   "license": "MIT",
   "dependencies": {
     "dot-prop": "^10.1.0",
     "to-fast-properties": "^4.0.0"
   },
   "devDependencies": {
-    "@deepkit/bench": "^1.0.19",
-    "@deepkit/expect": "^1.0.19",
+    "@runtyped/bench": "^1.0.19",
+    "@runtyped/expect": "^1.0.19",
     "@types/dot-prop": "~5.0.4"
   },
   "scripts": {
     "build": "echo '{\"type\": \"module\"}' > ./dist/esm/package.json"
-  },
-  "gitHead": "56081823b559bb68b77a8781957af5d9c2e019a7"
+  }
 }

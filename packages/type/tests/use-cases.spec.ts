@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { createSerializeFunction, executeTypeArgumentAsArray, SerializeFunction, serializer, TemplateState } from '../src/serializer';
 import { deserialize, serialize } from '../src/serializer-facade';
 import { validate } from '../index.js';

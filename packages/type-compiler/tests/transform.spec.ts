@@ -1,7 +1,7 @@
 import * as ts from 'typescript';
 import { createSourceFile, ScriptKind, ScriptTarget } from 'typescript';
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { ReflectionTransformer } from '../src/compiler.js';
 import { transform } from './utils.js';
 

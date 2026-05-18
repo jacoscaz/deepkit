@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { typeInfer } from '../src/reflection/processor.js';
 import { ReflectionClass, typeOf } from '../src/reflection/reflection.js';
 import {

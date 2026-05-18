@@ -1,8 +1,8 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { ReceiveType, resolveReceiveType } from '../../src/reflection/reflection';
 import { Type } from '../../src/reflection/type';
-import { forwardTypeArguments } from '@deepkit/core';
+import { forwardTypeArguments } from '@runtyped/core';
 
 test('function default', () => {
     class Clazz {

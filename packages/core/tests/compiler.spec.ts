@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { CompilerContext } from '../src/compiler.js';
 
 test('compiler', () => {

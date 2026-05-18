@@ -1,5 +1,5 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright Deepkit UG, Marc J. Schmidt, Apollo Software Limited, SamJakob
  *
  * This program is free software: you can redistribute it and/or modify
@@ -9,7 +9,7 @@
  */
 
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { expectEqualType } from "./utils";
 import { typeOf, valuesOf } from "../src/reflection/reflection";
 

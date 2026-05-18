@@ -1,5 +1,5 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright Deepkit UG, Marc J. Schmidt
  *
  * This program is free software: you can redistribute it and/or modify
@@ -9,7 +9,7 @@
  */
 
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { assertType, AutoIncrement, Group, groupAnnotation, PrimaryKey, ReflectionKind } from '../src/reflection/type.js';
 import { typeOf } from '../src/reflection/reflection.js';
 import { cast } from '../src/serializer-facade.js';

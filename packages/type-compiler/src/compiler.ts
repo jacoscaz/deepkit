@@ -1,6 +1,7 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (c) Deepkit UG, Marc J. Schmidt
+ * Copyright (c) Jacopo Scazzosi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
@@ -95,7 +96,7 @@ import {
     serializeEntityNameAsExpression,
 } from './reflection-ast.js';
 import { SourceFile } from './ts-types.js';
-import { MappedModifier, ReflectionOp, TypeIntrinsic, TypeNumberBrand } from '@deepkit/type-spec';
+import { MappedModifier, ReflectionOp, TypeIntrinsic, TypeNumberBrand } from '@runtyped/type-spec';
 import { Resolver } from './resolver.js';
 import { knownLibFilesForCompilerOptions } from '@typescript/vfs';
 import { debug, debug2 } from './debug.js';
@@ -486,7 +487,7 @@ export class Cache {
  *
  * This transformer extracts type and add the encoded (so its small and low overhead) at classes and functions as property.
  *
- * Deepkit/type can then extract and decode them on-demand.
+ * runtyped/type can then extract and decode them on-demand.
  */
 export class ReflectionTransformer implements CustomTransformer {
     sourceFile!: SourceFile;
@@ -2929,7 +2930,7 @@ export class DeclarationTransformer extends ReflectionTransformer {
     protected addExports: { identifier: string }[] = [];
 
     transformSourceFile(sourceFile: SourceFile): SourceFile {
-        if ((sourceFile as any).deepkitDeclarationTransformed) return sourceFile;
+        if ((sourceFile as any).runtypedDeclarationTransformed) return sourceFile;
 
         this.sourceFile = sourceFile;
         this.addExports = [];
@@ -2979,7 +2980,7 @@ export class DeclarationTransformer extends ReflectionTransformer {
             this.sourceFile = this.f.updateSourceFile(this.sourceFile, [...this.sourceFile.statements, ...exports]);
         }
 
-        (this.sourceFile as any).deepkitDeclarationTransformed = true;
+        (this.sourceFile as any).runtypedDeclarationTransformed = true;
 
         return this.sourceFile;
     }
@@ -2988,16 +2989,15 @@ export class DeclarationTransformer extends ReflectionTransformer {
 let loaded = false;
 const cache = new Cache;
 
-export const transformer: CustomTransformerFactory = function deepkitTransformer(context) {
+export const transformer: CustomTransformerFactory = function runtypedTransformer(context) {
     if (!loaded) {
-        debug('@deepkit/type transformer loaded\n');
+        debug('@runtyped/type transformer loaded\n');
         loaded = true;
     }
     cache.tick();
     return new ReflectionTransformer(context, cache);
 };
 
-export const declarationTransformer: CustomTransformerFactory = function deepkitDeclarationTransformer(context) {
+export const declarationTransformer: CustomTransformerFactory = function runtypedDeclarationTransformer(context) {
     return new DeclarationTransformer(context, cache);
 };
-

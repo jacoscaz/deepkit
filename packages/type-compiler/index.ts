@@ -1,5 +1,5 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (C) 2021 Deepkit UG, Marc J. Schmidt
  *
  * This program is free software: you can redistribute it and/or modify

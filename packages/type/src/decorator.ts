@@ -1,6 +1,7 @@
 /*
- * Deepkit Framework
+ * Runtyped Framework
  * Copyright (c) Deepkit UG, Marc J. Schmidt
+ * Copyright (c) Jacopo Scazzosi
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
@@ -10,7 +11,7 @@
 
 import { ClassDecoratorResult, createClassDecoratorContext, createPropertyDecoratorContext } from './decorator-builder.js';
 import { EntityData, ReceiveType, SerializerFn, TData } from './reflection/reflection.js';
-import { ClassType, isArray } from '@deepkit/core';
+import { ClassType, isArray } from '@runtyped/core';
 import { IndexOptions } from './reflection/type.js';
 import type { ValidateFunction } from './validator.js';
 import { typeSettings } from './core.js';

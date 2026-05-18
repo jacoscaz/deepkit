@@ -1,4 +1,4 @@
-import { isArray } from '@deepkit/core';
+import { isArray } from '@runtyped/core';
 import { ValidatorError } from './validator.js';
 import { TypeLiteral } from './reflection/type.js';
 

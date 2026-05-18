@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { expect } from '@deepkit/expect';
+import { expect } from '@runtyped/expect';
 import { stringifyResolvedType, stringifyShortResolvedType, stringifyType, Type } from '../src/reflection/type.js';
 import { reflect, typeOf } from '../src/reflection/reflection.js';
 import { deserializeType, serializeType } from '../src/type-serialization.js';
